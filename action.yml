@@ -1,0 +1,12 @@
+name: "Test Action"
+description: "Test Desc"
+inputs:
+  data:
+    description: "Test input"
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Greet
+      shell: bash
+      run: echo "Hello, ${{ inputs.data }}!"
